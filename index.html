@@ -1,92 +1,141 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>OTB Team</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<head>
+    <title>OTB Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 
-        <style>
-            body { padding-top: 70px; }
-        </style>
-    </head>
-  
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><img style="max-width:50px; margin-top: -12px;" src="images/logo.png"> </a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                            <li> <a href="http://ts.tldcode.uk:8081/nexus/content/repositories/snapshots/com/github/otbproject/otbproject/" target="_blank">Development</a></li>
-                            <li> <a href="https://github.com/OTBProject/OTBProject/releases" target="_blank">Releases</a></li>
-                            </ul>
+    <style>
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img style="max-width:50px; margin-top: -12px;" src="images/logo.png"> </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="http://ts.tldcode.uk:8081/nexus/content/repositories/snapshots/com/github/otbproject/otbproject/"
+                               target="_blank">Development</a></li>
+                        <li><a href="https://github.com/OTBProject/OTBProject/releases" target="_blank">Releases</a>
                         </li>
-                        
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="faq/">FAQ</a></li>
-                                <li><a href="eaq/">EAQ</a></li>
-                                <li class="divider"></li>
-                                <li><a href="https://github.com/OTBProject/OTBProject" target="_blank">Source Code</a></li>
-                                <li class="divider"></li>
-                                <li><a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issues</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="https://github.com/OTBProject/OTBProject/blob/master/chat-documentation.md" target="_blank">Documentation </a></li>
-                        <li> <a href="https://github.com/OTBProject/OTBProject/blob/master/CONTRIBUTING.md" target="_blank">Contributing </a></li>
-                        <li> <a href="changes/">Change Log </a></li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-8">
-                    <div class="jumbotron"><h1 class="text-center">OTB Project</br><small>By the OTB Team</small></h1></div>
-                </div>
-                <div class="col-md-2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-10">
-                    <h2>What is it?</h2>
-                    <p>
-                    OTB is an open source Twitch chat bot. It can currently recognize and respond to commands in chat, and is highly configurable. With it, you can have your own personalized bot for your Twitch channel, and because it's open source, it's free.
-                    </p><p>
-                    OTB allows you to create commands, which are specific words which the bot will respond to if they are the first word in a message. Commands typically start with an exclamation mark, such as "!example", but are not required to. You can also create aliases, which are words which can expand into several words, in order to run a command with parameters. For more information about commands and aliases, please see the chat documentation.
-                    </p><p>
-                    The bot also has a robust configuration system, allowing different configurations for each channel. Each channel has cooldown times for how long a user must wait between running commands. There are six different userlevels which can have different cooldown times, as well as a cooldown time for how long to wait between running a single command twice. Additionally, the bot can be configured to join other channels based on a whitelist or a blacklist.
-                    </p>
-                    <h2>Plans for the Future</h2>
-                    <p>
-                    We plan to add a way to store quotes so that they can be retrieved later either randomly or by ID, and which can be printed easily in chat.
-                    </p><p>
-                    A chat filtering and timeout system is also being planned. It will enable you to ban certain terms easily on the fly, as well as enabling you to create complex filters to block a wide variety of messages.
-                    </p>
-                </div>
-                <div class="col-md-1">
-                </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="faq/">FAQ</a></li>
+                        <li><a href="eaq/">EAQ</a></li>
+                        <li class="divider"></li>
+                        <li><a href="https://github.com/OTBProject/OTBProject" target="_blank">Source Code</a></li>
+                        <li class="divider"></li>
+                        <li><a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issues</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-expanded="false">Documentation <span class="caret"></span> </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://github.com/OTBProject/OTBProject/blob/master/docs/chat-documentation.md"
+                               target="_blank">Chat Documentation</a></li>
+                        <li><a href="https://github.com/OTBProject/OTBProject/blob/master/docs/config-documentation.md"
+                               target="_blank">Config Documentation</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="https://github.com/OTBProject/OTBProject/blob/master/CONTRIBUTING.md" target="_blank">Contributing </a>
+                </li>
+                <li><a href="changes/">Change Log </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <h1 class="text-center">OTB Project</br>
+                    <small>By the OTB Team</small>
+                </h1>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-    </body>
-    
+        <div class="col-md-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <h2>What is it?</h2>
+
+            <p>
+                OTB is an open source Twitch chat bot. It can currently recognize and respond to commands in chat, and
+                is highly configurable. With it, you can have your own personalized bot for your Twitch channel, and
+                because it's open source, it's free.
+            </p>
+
+            <p>
+                OTB allows you to create commands, which are specific words which the bot will respond to if they are
+                the first word in a message. Commands typically start with an exclamation mark, such as "!example", but
+                are not required to. You can also create aliases, which are words which can expand into several words,
+                in order to run a command with parameters. For more information about commands and aliases, please see
+                the chat documentation.
+            </p>
+
+            <p>
+                The bot also has a robust configuration system, allowing different configurations for each channel. Each
+                channel has cooldown times for how long a user must wait between running commands. There are six
+                different userlevels which can have different cooldown times, as well as a cooldown time for how long to
+                wait between running a single command twice. Additionally, the bot can be configured to join other
+                channels based on a whitelist or a blacklist.
+            </p>
+
+            <h2>Plans for the Future</h2>
+
+            <p>
+                We plan to add a way to store quotes so that they can be retrieved later either randomly or by ID, and
+                which can be printed easily in chat.
+            </p>
+
+            <p>
+                A chat filtering and timeout system is also being planned. It will enable you to ban certain terms
+                easily on the fly, as well as enabling you to create complex filters to block a wide variety of
+                messages.
+            </p>
+
+            <p>
+                Support for other live streaming services are planned, <a href="https://beam.pro">Beam</a> being the
+                first on the list.
+            </p>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
 </html>
