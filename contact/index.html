@@ -5,6 +5,7 @@
     <title>OTB Team</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+
     <style>
         body {
             padding-top: 70px;
@@ -12,7 +13,38 @@
         .link-unstyled:hover {
             text-decoration: none;
         }
+        #webchat {
+            display: none;
+            border: 0px solid #000;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        #channel {
+            display: inline;
+            border: 0px solid #000;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            overflow: hidden;
+            background: #dddddd;
+            padding: 1px;
+        }
     </style>
+    <script type="text/javascript">
+       window.onload = function() {
+            var b = document.getElementById("webchat");
+            var a = document.getElementById("webchatLink");
+
+            a.onclick = function() {
+                if (b.style.display != "block") {
+                    b.style.display = "block";
+                }else{
+                    b.style.display = "none";
+                }
+                return false;
+            }
+       }
+    </script>
 </head>
 
 <body>
@@ -26,14 +58,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../index.html"><img style="max-width:50px; margin-top: -12px;"
-                                                              src="../images/logo.png"></a>
+            <a class="navbar-brand" href="../"><img style="max-width:50px; margin-top: -12px;" src="../images/logo.png"> </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="../">Home </a></li>
+                <li><a href="/">Home <span class="sr-only">(current)</span></a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download
+                    <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
@@ -43,14 +74,15 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown">
+
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="../faq/">FAQ</a></li>
                         <li><a href="../eaq/">EAQ</a></li>
                         <li class="divider"></li>
-                        <li><a href="../contact/">Contact Us</a></li>
+                        <li><a href="">Contact Us</a></li>
                         <li class="divider"></li>
                         <li><a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issues</a></li>
                     </ul>
@@ -70,7 +102,7 @@
                 </li>
                 <li><a href="https://github.com/OTBProject/OTBProject/blob/master/CONTRIBUTING.md" target="_blank">Contributing </a>
                 </li>
-                <li class="active"><a href="">Change Log <span class="sr-only">(current)</span></a></li>
+                <li><a href="../changes/">Change Log </a></li>
             </ul>
         </div>
     </div>
@@ -80,7 +112,9 @@
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
-            <div class="jumbotron"><h1 class="text-center">Changelog</h1></div>
+            <div class="jumbotron">
+                <h1 class="text-center">Contact Us</h1>
+            </div>
         </div>
         <div class="col-md-2">
         </div>
@@ -93,15 +127,15 @@
                 <li>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4><a class="link-unstyled" href="https://github.com/OTBProject/OTBProject/releases/tag/v1.0.1">Version 1.0.1
-                                <small>2015-03-30</small>
-                            </a></h4>
+                            <h4>IRC</h4>
                         </div>
                         <div class="panel-body">
+                                We have a channel on <a class="link-unstyled" href="irc://irc.esper.net:6667/#otbproject">EsperNet</a>! </br>
+                                The channel is <div id="channel">#OTBProject</div>
                             <ul>
-                                <li>Documentation fixes</li>
-                                <li>Fixed a bug with how commands were processed which could result in a command with an empty name</li>
-                                <li>Updated the license.</li>
+                                <li><a class="link-unstyled" href="http://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients" target="_blank">Irc Clients</a></li>
+                                <li><a id="webchatLink" class="link-unstyled" href="http://webchat.esper.net/?nick=&channels=OTBProject&fg_color=111111&fg_sec_color=999999&bg_color=eeeeee" target="_blank">WebChat</a></li>
+                                <iframe  frameborder="0" id="webchat" src="http://webchat.esper.net/?nick=&channels=OTBProject&fg_color=111111&fg_sec_color=999999&bg_color=eeeeee" width="647" height="400"></iframe>
                             </ul>
                         </div>
                     </div>
@@ -109,57 +143,19 @@
                 <li>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4><a class="link-unstyled" href="https://github.com/OTBProject/OTBProject/releases/tag/v1.0.0">Version 1.0.0
-                                <small>2015-03-29</small>
-                            </a></h4>
+                            <h4>Twitter</h4>
                         </div>
                         <div class="panel-body">
-                            <ul>
-                                <li>Documentation</li>
-                                <li>Tutorial added to documentation</li>
-                                <li>Fully functional CLI</li>
-                                <li>Misc bug fixes</li>
-                                <li>"--debug" command line switch to enable debug logging to the console</li>
-                                <li>(API) APIConfig now has methods for getting all configs</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4><a class="link-unstyled" href="https://github.com/OTBProject/OTBProject/releases/tag/v0.10.1">Version 0.10.1
-                                (Pre-Release)
-                                <small>2015-03-16</small>
-                            </a></h4>
-                        </div>
-                        <div class="panel-body">
-                            <ul>
-                                <li>Unpacking of preloaded Scripts now works as intended</li>
-                                <li>Unpacking of preloaded Commands now works as intended</li>
-                                <li>Unpacking of preloaded Aliases now works as intended</li>
-                            </ul>
+                            We have a <a class="link-unstyled" href="https://twitter.com/otbproject" target="_blank">Twitter</a>!
+                                <h5>Personal Twitters</h5>
+                                <ul>
+                                    <li><a class="link-unstyled" href="https://twitter.com/the_lone_devil" target="_blank">The_Lone_Devil</a></li>
+                                    <li><a class="link-unstyled" href="https://twitter.com/nthportal" target="_blank">NthPortal</a></li>
+                                </ul>
                         </div>
                     </div>
                 </li>
 
-                <li>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4><a class="link-unstyled" href="https://github.com/OTBProject/OTBProject/releases/tag/v0.9">Version 0.9.0
-                                (Pre-Release)
-                                <small>2015-03-15</small>
-                            </a></h4>
-                        </div>
-                        <div class="panel-body">
-                            <ul>
-                                <li>First Pre-release</li>
-                                <li>Bot joins own channel</li>
-                                <li>Bot responds to commands</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
             </ul>
         </div>
         <div class="col-md-2">
