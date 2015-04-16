@@ -1,4 +1,4 @@
 [submodule "docs"]
 	path = docs
-url=https://github.com/thelonedevil/OTBProject
-branch=docs
+url=https://github.com/OTBProject/OTBProject
+branch=master
