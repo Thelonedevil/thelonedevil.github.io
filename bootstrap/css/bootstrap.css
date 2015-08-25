@@ -192,6 +192,10 @@ td,
 th {
   padding: 0;
 }
+
+.navbar img {
+max-width:50px; margin-top: -16px;
+}
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
