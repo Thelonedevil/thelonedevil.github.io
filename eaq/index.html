@@ -1,197 +1,52 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: EAQ
+---
 
-<head>
-    <title>OTBProject</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-    <style>
-        body {
-            padding-top: 70px;
-        }
+<div class="jumbotron">
+    <h1 class="text-center">EAQ<br/>
+        <small>Excessively Asked Questions</small>
+    </h1>
+</div>
 
-        .cd-top {
-            border-radius: 5px;
-            display: inline-block;
-            height: 40px;
-            width: 40px;
-            position: fixed;
-            bottom: 40px;
-            right: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            /* image replacement properties */
-            overflow: hidden;
-            text-indent: 100%;
-            white-space: nowrap;
-            background: #555 url(/images/cd-top-arrow.svg) no-repeat center 50%;
-            visibility: hidden;
-            opacity: 0;
-            -webkit-transition: opacity .6s 0s, visibility 0s .3s;
-            -moz-transition: opacity .6s 0s, visibility 0s .3s;
-            transition: opacity .6s 0s, visibility 0s .3s;
-        }
-
-        .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
-            -webkit-transition: opacity .6s 0s, visibility 0s 0s;
-            -moz-transition: opacity .6s 0s, visibility 0s 0s;
-            transition: opacity .6s 0s, visibility 0s 0s;
-        }
-
-        .cd-top.cd-is-visible {
-            /* the button becomes visible */
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .cd-top.cd-fade-out {
-            /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-            opacity: .5;
-        }
-
-        .no-touch .cd-top:hover {
-            background-color: #555;
-            opacity: 1;
-        }
-
-        @media only screen and (min-width: 768px) {
-            .cd-top {
-                right: 20px;
-                bottom: 20px;
-            }
-        }
-
-        @media only screen and (min-width: 1024px) {
-            .cd-top {
-                height: 60px;
-                width: 60px;
-                right: 30px;
-                bottom: 30px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../index.html"><img src="../images/logo.png"></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="../">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="http://maven.tldcode.uk:8081/content/repositories/snapshots/com/github/otbproject/otbproject/"
-                               target="_blank">Development</a></li>
-                        <li><a href="https://github.com/OTBProject/OTBProject/releases" target="_blank">Releases</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="../faq/">FAQ</a></li>
-                        <li class="active"><a href="">EAQ <span class="sr-only">(current)</span></a></li>
-                        <li class="divider"></li>
-                        <li><a href="../contact/">Contact Us</a></li>
-                        <li class="divider"></li>
-                        <li><a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issues</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://github.com/OTBProject/OTBProject" target="_blank">Source Code</a></li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                        aria-expanded="false">Documentation <span class="caret"></span> </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="../docs/docs/tutorial.html">Tutorial: Setup</a></li>
-                        <li><a href="../docs/docs/chat-guide.html">Tutorial: Chat [WIP]</a></li>
-                        <li><a href="../docs/docs/chat-documentation.html">Chat Documentation</a></li>
-                        <li><a href="../docs/docs/config-documentation.html">Config Documentation</a></li>
-                    </ul>
-
-                </li>
-                <li><a href="https://github.com/OTBProject/OTBProject/blob/master/CONTRIBUTING.md" target="_blank">Contributing </a>
-                </li>
-                <li><a href="../changes/">Change Log </a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8">
-            <div class="jumbotron">
-                <h1 class="text-center">EAQ</br>
-                    <small>Excessively Asked Questions</small>
-                </h1>
-            </div>
-        </div>
-        <div class="col-md-2">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <h4>Are you a god?</br>
-                        <small>Yes</small>
-                    </h4>
-                </li>
-                <li class="list-group-item">
-                    <h4>I keep getting this when I run it <code>Error: Could not find or load main class
-                        Files </code></br>
-                        <small>Make sure you are using Java 8</small>
-                    </h4>
-                </li>
-                <li class="list-group-item">
-                    <h4>I keep getting this when I run it </br><code>
-                        Exception in thread "main" java.lang.UnsupportedClassVersionError:
-                        com/github/otbproject/otbproject/App : Unsupported major.minor version 52.0
-                    </code></br>
-                        <small>Make sure you are using Java 8</small>
-                    </h4>
-                </li>
-                <li class="list-group-item">
-                    <h4>What does OTB stand for? </br>
-                        <small>It stands for
+<ul class="list-group">
+    <li class="list-group-item">
+        <h4>Are you a god?<br/>
+            <small>Yes</small>
+        </h4>
+    </li>
+    <li class="list-group-item">
+        <h4>I keep getting this when I run it <code>Error: Could not find or load main class
+            Files </code><br/>
+            <small>Make sure you are using Java 8</small>
+        </h4>
+    </li>
+    <li class="list-group-item">
+        <h4>I keep getting this when I run it <br/><code>
+            Exception in thread "main" java.lang.UnsupportedClassVersionError:
+            com/github/otbproject/otbproject/App : Unsupported major.minor version 52.0
+        </code><br/>
+            <small>Make sure you are using Java 8</small>
+        </h4>
+    </li>
+    <li class="list-group-item">
+        <h4>What does OTB stand for? <br/>
+            <small>It stands for
                             <span id="OTB">
                             </span>.
-                        </small>
-                    </h4>
-                </li>
-                <li class="list-group-item">
-                    <h4>Not many EAQs either </br>
-                        <small>We have not had any questions that have been excessively asked, as such, we have
-                            added a couple we expect to get very very very tired of answering. (yes some of
-                            these are a joke)
-                        </small>
-                    </h4>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-2">
-        </div>
-    </div>
-</div>
-<a href="#0" class="cd-top">Top</a>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
+            </small>
+        </h4>
+    </li>
+    <li class="list-group-item">
+        <h4>Not many EAQs either <br/>
+            <small>We have not had any questions that have been excessively asked, as such, we have
+                added a couple we expect to get very very very tired of answering. (yes some of
+                these are a joke)
+            </small>
+        </h4>
+    </li>
+</ul>
+
 <script>
     function loadJSON(callback) {
 
@@ -205,20 +60,17 @@
         };
         xobj.send(null);
     }
-    loadJSON(function(response) {
+    loadJSON(function (response) {
         // Parse JSON string into object
         var json = JSON.parse(response);
         console.log(json);
         console.log(Array.isArray(json.words))
         console.log(json.words[0]);
-        var o =  json.words[0].os[Math.floor(Math.random() *  json.words[0].os.length)];
-        var t =  json.words[1].ts[Math.floor(Math.random() *  json.words[1].ts.length)];
-        var b =  json.words[2].bs[Math.floor(Math.random() *  json.words[2].bs.length)];
-        var name = o + " " + t + " " + b;
-        document.getElementById("OTB").innerHTML = name;
+        var o = json.words[0].os[Math.floor(Math.random() * json.words[0].os.length)];
+        var t = json.words[1].ts[Math.floor(Math.random() * json.words[1].ts.length)];
+        var b = json.words[2].bs[Math.floor(Math.random() * json.words[2].bs.length)];
+        document.getElementById("OTB").innerHTML = o + " " + t + " " + b;
     });
 
 </script>
-</body>
 
-</html>

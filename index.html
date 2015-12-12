@@ -1,193 +1,62 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Home
+---
 
-<head>
-    <title>OTBProject</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 
-    <style>
-        body {
-            padding-top: 70px;
-        }
-        .cd-top {
-            border-radius: 5px;
-            display: inline-block;
-            height: 40px;
-            width: 40px;
-            position: fixed;
-            bottom: 40px;
-            right: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            /* image replacement properties */
-            overflow: hidden;
-            text-indent: 100%;
-            white-space: nowrap;
-            background: #555 url(/images/cd-top-arrow.svg) no-repeat center 50%;
-            visibility: hidden;
-            opacity: 0;
-            -webkit-transition: opacity .6s 0s, visibility 0s .3s;
-            -moz-transition: opacity .6s 0s, visibility 0s .3s;
-            transition: opacity .6s 0s, visibility 0s .3s;
-        }
-        .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
-            -webkit-transition: opacity .6s 0s, visibility 0s 0s;
-            -moz-transition: opacity .6s 0s, visibility 0s 0s;
-            transition: opacity .6s 0s, visibility 0s 0s;
-        }
-        .cd-top.cd-is-visible {
-            /* the button becomes visible */
-            visibility: visible;
-            opacity: 1;
-        }
-        .cd-top.cd-fade-out {
-            /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-            opacity: .5;
-        }
-        .no-touch .cd-top:hover {
-            background-color: #555;
-            opacity: 1;
-        }
-        @media only screen and (min-width: 768px) {
-            .cd-top {
-                right: 20px;
-                bottom: 20px;
-            }
-        }
-        @media only screen and (min-width: 1024px) {
-            .cd-top {
-                height: 60px;
-                width: 60px;
-                right: 30px;
-                bottom: 30px;
-            }
-        }
-    </style>
-</head>
+<div class="jumbotron">
+    <h1 class="text-center">OTB Project<br/>
+        <small>By the OTB Team</small>
+    </h1>
+</div>
 
-<body>
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="images/logo.png"> </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="http://maven.tldcode.uk:8081/content/repositories/snapshots/com/github/otbproject/otbproject/"
-                               target="_blank">Development</a></li>
-                        <li><a href="https://github.com/OTBProject/OTBProject/releases" target="_blank">Releases</a>
-                        </li>
-                    </ul>
-                </li>
+</div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="faq/">FAQ</a></li>
-                        <li><a href="eaq/">EAQ</a></li>
-                        <li class="divider"></li>
-                        <li><a href="contact/">Contact Us</a></li>
-                        <li class="divider"></li>
-                        <li><a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issues</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://github.com/OTBProject/OTBProject" target="_blank">Source Code</a></li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                        aria-expanded="false">Documentation <span class="caret"></span> </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="docs/docs/tutorial.html">Tutorial: Setup</a></li>
-                        <li><a href="docs/docs/chat-guide.html">Tutorial: Chat [WIP]</a></li>
-                        <li><a href="docs/docs/chat-documentation.html">Chat Documentation</a></li>
-                        <li><a href="docs/docs/config-documentation.html">Config Documentation</a></li>
-                    </ul>
 
-                </li>
-                <li><a href="https://github.com/OTBProject/OTBProject/blob/master/CONTRIBUTING.md" target="_blank">Contributing </a>
-                </li>
-                <li><a href="changes/">Change Log </a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8">
-            <div class="jumbotron">
-                <h1 class="text-center">OTB Project</br>
-                    <small>By the OTB Team</small>
-                </h1>
-            </div>
-        </div>
-        <div class="col-md-2">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-10">
-            <h2>What is it?</h2>
+        <h2>What is it?</h2>
 
-            <p>
-                OTB is an open source chat bot for Twitch and Beam. It can currently recognize and respond to commands in chat, and
-                is highly configurable. With it, you can have your own personalized bot for your Twitch channel, and
-                because it's open source, it's free.
-            </p>
+        <p>
+            OTB is an open source chat bot for Twitch and Beam. It can currently recognize and respond to commands in
+            chat, and
+            is highly configurable. With it, you can have your own personalized bot for your Twitch channel, and
+            because it's open source, it's free.
+        </p>
 
-            <p>
-                OTB allows you to create commands, which are specific words which the bot will respond to if they are
-                the first word in a message. Commands typically start with an exclamation mark, such as "!example", but
-                are not required to. You can also create aliases, which are words which can expand into several words,
-                in order to run a command with parameters. For more information about commands and aliases, please see
-                the chat documentation.
-            </p>
+        <p>
+            OTB allows you to create commands, which are specific words which the bot will respond to if they are
+            the first word in a message. Commands typically start with an exclamation mark, such as "!example", but
+            are not required to. You can also create aliases, which are words which can expand into several words,
+            in order to run a command with parameters. For more information about commands and aliases, please see
+            the chat documentation.
+        </p>
 
-            <p>
-                The bot also has a robust configuration system, allowing different configurations for each channel. Each
-                channel has cooldown times for how long a user must wait between running commands. There are six
-                different userlevels which can have different cooldown times, as well as a cooldown time for how long to
-                wait between running a single command twice. Additionally, the bot can be configured to join other
-                channels based on a whitelist or a blacklist.
-            </p>
+        <p>
+            The bot also has a robust configuration system, allowing different configurations for each channel. Each
+            channel has cooldown times for how long a user must wait between running commands. There are six
+            different userlevels which can have different cooldown times, as well as a cooldown time for how long to
+            wait between running a single command twice. Additionally, the bot can be configured to join other
+            channels based on a whitelist or a blacklist.
+        </p>
 
-            <h2>Plans for the Future</h2>
+        <h2>Plans for the Future</h2>
 
-            <p>
-                We plan to add a way to schedule commands to be run at regular intervals.
-            </p>
+        <p>
+            We plan to add a way to schedule commands to be run at regular intervals.
+        </p>
 
-            <p>
-                A chat filtering and timeout system is also being planned. It will enable you to ban certain terms
-                easily on the fly, as well as enabling you to create complex filters to block a wide variety of
-                messages.
-            </p>
+        <p>
+            A chat filtering and timeout system is also being planned. It will enable you to ban certain terms
+            easily on the fly, as well as enabling you to create complex filters to block a wide variety of
+            messages.
+        </p>
 
-            <p>
-                A web interface is currently in the works. It will provide a graphical interface to make configuration changes much easier.
-            </p>
-        </div>
-        <div class="col-md-1">
-        </div>
+        <p>
+            A web interface is currently in the works. It will provide a graphical interface to make configuration
+            changes much easier.
+        </p>
+
     </div>
 </div>
-<a href="#0" class="cd-top">Top</a>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/main.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>

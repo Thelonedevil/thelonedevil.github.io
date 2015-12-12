@@ -1,231 +1,67 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Contact Us
+---
 
-<head>
-    <title>OTBProject</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+<div class="jumbotron">
+    <h1 class="text-center">Contact Us</h1>
+</div>
 
-    <style>
-        body {
-            padding-top: 70px;
-        }
-        .link-unstyled:hover {
-            text-decoration: none;
-        }
-        #webchat {
-            display: none;
-            border: 0px solid #000;
-            -moz-border-radius: 7px;
-            border-radius: 7px;
-            overflow: hidden;
-        }
-        #channel {
-            display: inline;
-            border: 0px solid #000;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
-            overflow: hidden;
-            background: #dddddd;
-            padding: 1px;
-        }.cd-top {
-             border-radius: 5px;
-             display: inline-block;
-             height: 40px;
-             width: 40px;
-             position: fixed;
-             bottom: 40px;
-             right: 10px;
-             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-             /* image replacement properties */
-             overflow: hidden;
-             text-indent: 100%;
-             white-space: nowrap;
-             background: #555 url(/images/cd-top-arrow.svg) no-repeat center 50%;
-             visibility: hidden;
-             opacity: 0;
-             -webkit-transition: opacity .6s 0s, visibility 0s .3s;
-             -moz-transition: opacity .6s 0s, visibility 0s .3s;
-             transition: opacity .6s 0s, visibility 0s .3s;
-         }
-        .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
-            -webkit-transition: opacity .6s 0s, visibility 0s 0s;
-            -moz-transition: opacity .6s 0s, visibility 0s 0s;
-            transition: opacity .6s 0s, visibility 0s 0s;
-        }
-        .cd-top.cd-is-visible {
-            /* the button becomes visible */
-            visibility: visible;
-            opacity: 1;
-        }
-        .cd-top.cd-fade-out {
-            /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-            opacity: .5;
-        }
-        .no-touch .cd-top:hover {
-            background-color: #555;
-            opacity: 1;
-        }
-        @media only screen and (min-width: 768px) {
-            .cd-top {
-                right: 20px;
-                bottom: 20px;
-            }
-        }
-        @media only screen and (min-width: 1024px) {
-            .cd-top {
-                height: 60px;
-                width: 60px;
-                right: 30px;
-                bottom: 30px;
-            }
-        }
-    </style>
-    <script type="text/javascript">
-       window.onload = function() {
-            var b = document.getElementById("webchat");
-            var a = document.getElementById("webchatLink");
-
-            a.onclick = function() {
-                if (b.style.display != "block") {
-                    b.style.display = "block";
-                }else{
-                    b.style.display = "none";
-                }
-                return false;
-            }
-       }
-    </script>
-</head>
-
-<body>
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../"><img src="../images/logo.png"> </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home <span class="sr-only">(current)</span></a></li>
-                <li class="dropdown">
-                    <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="http://maven.tldcode.uk:8081/content/repositories/snapshots/com/github/otbproject/otbproject/"
-                               target="_blank">Development</a></li>
-                        <li><a href="https://github.com/OTBProject/OTBProject/releases" target="_blank">Releases</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="../faq/">FAQ</a></li>
-                        <li><a href="../eaq/">EAQ</a></li>
-                        <li class="divider"></li>
-                        <li><a href="">Contact Us</a></li>
-                        <li class="divider"></li>
-                        <li><a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issues</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://github.com/OTBProject/OTBProject" target="_blank">Source Code</a></li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                        aria-expanded="false">Documentation <span class="caret"></span> </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="../docs/docs/tutorial.html">Tutorial: Setup</a></li>
-                        <li><a href="../docs/docs/chat-guide.html">Tutorial: Chat [WIP]</a></li>
-                        <li><a href="../docs/docs/chat-documentation.html">Chat Documentation</a></li>
-                        <li><a href="../docs/docs/config-documentation.html">Config Documentation</a></li>
-                    </ul>
-
-                </li>
-                <li><a href="https://github.com/OTBProject/OTBProject/blob/master/CONTRIBUTING.md" target="_blank">Contributing </a>
-                </li>
-                <li><a href="../changes/">Change Log </a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8">
-            <div class="jumbotron">
-                <h1 class="text-center">Contact Us</h1>
+<ul class="list-unstyled">
+    <li>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Gitter</h4>
+            </div>
+            <div class="panel-body">
+                We have a <a href="https://gitter.im/OTBProject/OTBProject?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link"
+                    target="_blank">Gitter room</a>! <br/>
             </div>
         </div>
-        <div class="col-md-2">
+    </li>
+    <li>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>IRC</h4>
+            </div>
+            <div class="panel-body">
+                We have a channel on <a class="link-unstyled"
+                                        href="irc://irc.esper.net:6667/#otbproject">EsperNet</a>! <br/>
+                The channel is
+                <div id="channel">#OTBProject</div>
+                <ul>
+                    <li><a class="link-unstyled"
+                           href="http://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients"
+                           target="_blank">Irc Clients</a></li>
+                    <li><a id="webchatLink" class="link-unstyled"
+                           href="http://webchat.esper.net/?nick=&channels=OTBProject&fg_color=111111&fg_sec_color=999999&bg_color=eeeeee"
+                           target="_blank">WebChat</a></li>
+                    <li id="webchat">
+                        <iframe title="OTBProject IRC Webchat"
+                                src="https://webchat.esper.net/?nick=Contact......&amp;channels=OTBProject&amp;fg_color=111111&amp;fg_sec_color=999999&bg_color=eeeeee&amp;prompt=0"
+                                width="647" height="400"></iframe>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
+    </li>
+    <li>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Twitter</h4>
+            </div>
+            <div class="panel-body">
+                We have a <a class="link-unstyled" href="https://twitter.com/otbproject" target="_blank">Twitter</a>!
+                <h5>Personal Twitters</h5>
+                <ul>
+                    <li><a class="link-unstyled" href="https://twitter.com/the_lone_devil" target="_blank">The_Lone_Devil</a>
+                    </li>
+                    <li><a class="link-unstyled" href="https://twitter.com/nthportal" target="_blank">NthPortal</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-8">
-            <ul class="list-unstyled">
-                <li>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4>Gitter</h4>
-                        </div>
-                        <div class="panel-body">
-                            We have a <a href="http://blog.gitter.im/about/">gitter</a> room!. </br>
-                            Click <a href="https://gitter.im/OTBProject/OTBProject?utm_source=share-link&utm_medium=link&utm_campaign=share-link" target="_blank">here</a>!
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4>IRC</h4>
-                        </div>
-                        <div class="panel-body">
-                                We have a channel on <a class="link-unstyled" href="irc://irc.esper.net:6667/#otbproject">EsperNet</a>! </br>
-                                The channel is <div id="channel">#OTBProject</div>
-                            <ul>
-                                <li><a class="link-unstyled" href="http://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients" target="_blank">Irc Clients</a></li>
-                                <li><a id="webchatLink" class="link-unstyled" href="http://webchat.esper.net/?nick=&channels=OTBProject&fg_color=111111&fg_sec_color=999999&bg_color=eeeeee" target="_blank">WebChat</a></li>
-                                <iframe  frameborder="0" id="webchat" src="http://webchat.esper.net/?nick=&channels=OTBProject&fg_color=111111&fg_sec_color=999999&bg_color=eeeeee" width="647" height="400"></iframe>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4>Twitter</h4>
-                        </div>
-                        <div class="panel-body">
-                            We have a <a class="link-unstyled" href="https://twitter.com/otbproject" target="_blank">Twitter</a>!
-                                <h5>Personal Twitters</h5>
-                                <ul>
-                                    <li><a class="link-unstyled" href="https://twitter.com/the_lone_devil" target="_blank">The_Lone_Devil</a></li>
-                                    <li><a class="link-unstyled" href="https://twitter.com/nthportal" target="_blank">NthPortal</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                </li>
+    </li>
 
-            </ul>
-        </div>
-        <div class="col-md-2">
-        </div>
-    </div>
-</div>
-<a href="#0" class="cd-top">Top</a>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/main.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-</body>
+</ul>
 
-</html>
+

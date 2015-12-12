@@ -1,0 +1,16 @@
+//colors
+$color_0: rgba(0, 0, 0, 0.05);
+$color_1: #555;
+
+//urls
+$url_0: url(/images/cd-top-arrow.svg);
+
+//@extend-elements
+//original selectors
+//.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover
+%extend_1 {
+  -webkit-transition: opacity .6s 0s, visibility 0s 0s;
+  -moz-transition: opacity .6s 0s, visibility 0s 0s;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity .6s 0s, visibility 0s 0s;
+}

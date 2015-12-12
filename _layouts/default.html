@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{page.title}} - OTBProject</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img width="500" height="515" src="/images/logo.png" alt="OTBProject Logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            {% assign current = page.url | downcase | split: '/' %}
+            <ul class="nav navbar-nav">
+                {% if page.title == 'Home'%}
+
+                <li class="active"><a>Home<span class="sr-only">(current)</span></a></li>
+                {%else%}
+                <li><a href="/">Home</a></li>
+                {%endif%}
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="http://maven.tldcode.uk:8081/content/repositories/snapshots/com/github/otbproject/otbproject/"
+                               target="_blank">Development</a></li>
+                        <li><a href="https://github.com/OTBProject/OTBProject/releases" target="_blank">Releases</a>
+                        </li>
+                        <li><a href="https://github.com/OTBProject/OTBWebinterface/releases" target="_blank">Web
+                            Releases</a>
+                        </li>
+                    </ul>
+                </li>
+
+                {% if current[1] == 'faq' or current[1] == 'eaq' or current[1] == 'contact' %}
+                <li class="active dropdown"><span class="sr-only">(current)</span>
+                    {%else%}
+                <li class="dropdown">
+                    {%endif%}
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        {% if current[1] == 'faq'%}
+                        <li class="active"><a>FAQ<span class="sr-only">(current)</span></a></li>
+                        {%else%}
+                        <li><a href="/faq/">FAQ</a></li>
+                        {%endif%}
+                        {% if current[1] == 'eaq'%}
+                        <li class="active"><a>EAQ<span class="sr-only">(current)</span></a></li>
+                        {%else%}
+                        <li><a href="/eaq/">EAQ</a></li>
+                        {%endif%}
+                        <li class="divider"></li>
+                        {% if current[1] == 'contact'%}
+                        <li class="active"><a>Contact Us<span class="sr-only">(current)</span></a></li>
+                        {%else%}
+                        <li><a href="/contact/">Contact Us</a></li>
+                        {%endif%}
+                        <li class="divider"></li>
+                        <li><a href="https://github.com/OTBProject/OTBProject/issues" target="_blank">Issues</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/OTBProject/OTBProject" target="_blank">Source Code</a></li>
+                {% if page.title == "Tutorial - Setup" or page.title == "Tutorial - Chat" or page.title == "Config Documentation" or page.title == "Chat Documentation" %}
+                <li class="active dropdown"><span class="sr-only">(current)</span>
+                    {%else%}
+                <li class="dropdown">
+                    {%endif%}
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-expanded="false">Documentation <span class="caret"></span> </a>
+                    <ul class="dropdown-menu" role="menu">
+                        {% if page.title == "Tutorial - Setup" %}
+                        <li class="active"><a>Tutorial: Setup</a><span class="sr-only">(current)</span></li>
+                        <li><a href="/docs/docs/chat-guide">Tutorial: Chat [WIP]</a></li>
+                        <li><a href="/docs/docs/chat-documentation">Chat Documentation</a></li>
+                        <li><a href="/docs/docs/config-documentation">Config Documentation</a></li>
+                        {% elsif page.title == "Tutorial - Chat" %}
+                        <li><a href="/docs/docs/tutorial">Tutorial: Setup</a></li>
+                        <li class="active"><a>Tutorial: Chat [WIP]</a><span class="sr-only">(current)</span></li>
+                        <li><a href="/docs/docs/chat-documentation">Chat Documentation</a></li>
+                        <li><a href="/docs/docs/config-documentation">Config Documentation</a></li>
+                        {% elsif page.title == "Chat Documentation" %}
+                        <li><a href="/docs/docs/tutorial">Tutorial: Setup</a></li>
+                        <li><a href="/docs/docs/chat-guide">Tutorial: Chat [WIP]</a></li>
+                        <li class="active"><a>Chat Documentation</a><span class="sr-only">(current)</span></li>
+                        <li><a href="/docs/docs/config-documentation">Config Documentation</a></li>
+                        {% elsif page.title == "Config Documentation" %}
+                        <li><a href="/docs/docs/tutorial">Tutorial: Setup</a></li>
+                        <li><a href="/docs/docs/chat-guide">Tutorial: Chat [WIP]</a></li>
+                        <li><a href="/docs/docs/chat-documentation">Chat Documentation</a></li>
+                        <li class="active"><a>Config Documentation</a><span class="sr-only">(current)</span></li>
+                        {% else %}
+                        <li><a href="/docs/docs/tutorial">Tutorial: Setup</a></li>
+                        <li><a href="/docs/docs/chat-guide">Tutorial: Chat [WIP]</a></li>
+                        <li><a href="/docs/docs/chat-documentation">Chat Documentation</a></li>
+                        <li><a href="/docs/docs/config-documentation">Config Documentation</a></li>
+                        {% endif %}
+                    </ul>
+
+                </li>
+                <li><a href="https://github.com/OTBProject/OTBProject/blob/master/CONTRIBUTING.md" target="_blank">Contributing </a>
+                </li>
+                {% if current[1] == 'changes'%}
+                <li class="active"><a>Change Log</a></li>
+                {%else%}
+                <li><a href="/changes/">Change Log</a></li>
+                {%endif%}
+                {% if current[1] == 'web-changes'%}
+                <li class="active"><a>Web Change Log</a></li>
+                {%else%}
+                <li><a href="/web-changes/">Web Change Log</a></li>
+                {%endif%}
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-8 col-md-offset-2">
+            {{ content }}
+        </div>
+
+    </div>
+</div>
+<a href="#0" class="cd-top">Top</a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
